@@ -40,7 +40,7 @@ module.exports.matchs_du_jour = res => {
             messages: [
               {
                 message: {
-                  text: text,
+                  text: text
                 }
               }
             ]
@@ -102,34 +102,47 @@ module.exports.matchs_du_jour = res => {
 
             if (i <= 13) {
               msgs[0] = text;
+               if (i == 13) {
+                text = "";
+              }
             }
 
-            if (i == 28) {
+            if (i > 13 && i <= 28) {
               msgs[1] = text;
-              text = "";
+              if (i == 28) {
+                text = "";
+              }
             }
 
-            if (i == 43) {
+            if (i > 28 && i <= 43) {
               msgs[2] = text;
-              text = "";
+              if (i == 43) {
+                text = "";
+              }
             }
 
-            if (i == 58) {
+            if (i > 43 && i <= 58) {
               msgs[3] = text;
-              text = "";
+              if (i == 58) {
+                text = "";
+              }
             }
 
-            if (i == 73) {
+            if (i > 58 && i <= 73) {
               msgs[4] = text;
-              text = "";
+              if (i == 73) {
+                text = "";
+              }
             }
 
-            if (i == 88) {
+            if (i > 73 && i <= 88) {
               msgs[5] = text;
-              text = "";
+              if (i == 88) {
+                text = "";
+              }
             }
-            
-            console.log("MSGS:\n"+msgs);
+
+            console.log("MSGS:\n" + msgs);
 
             if (i <= 10) {
               replies[i] = {
@@ -142,8 +155,6 @@ module.exports.matchs_du_jour = res => {
               };
             }
           }
-          
-          
 
           for (let i = 0; i < msgs.length; i++) {
             if (i == msgs.length - 1) {
